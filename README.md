@@ -4,7 +4,7 @@ The Community Architects homepage
 ## Scripts
 
 ### `npm install`
-Install required packages.
+Installs required packages.
 
 ### `npm run start`
 Runs the app in the development mode.\
