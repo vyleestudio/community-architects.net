@@ -1,0 +1,33 @@
+/* Galano */
+
+@font-face {
+  font-family: 'Galano';
+  src: url('../fonts/galanogrotesquemedium-webfont.woff2') format('woff2'),
+    url('../fonts/galanogrotesquemedium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Galano';
+  src: url('../fonts/galanogrotesquebold-webfont.woff2') format('woff2'),
+    url('../fonts/galanogrotesquebold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Galano';
+  src: url('../fonts/galanogrotesqueitalic-webfont.woff2') format('woff2'),
+    url('../fonts/galanogrotesqueitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Galano';
+  src: url('../fonts/galanogrotesquebolditalic-webfont.woff2') format('woff2'),
+    url('../fonts/galanogrotesquebolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}

@@ -1,0 +1,355 @@
+/* General */
+
+:root {
+  /* Responsive */
+  --max-width-full: 856px;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  font-family: 'Galano', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Themes */
+
+body.dark {
+  --color-bg: #18192C;
+  --color-bg-wrapper: #242538;
+  --color-bg-wrapper-alt: #242538;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C3C4D9;
+  --color-text-disabled: #76789c;
+  --color-text-tag: #FFFFFF;
+  --color-accent: #2F975F;
+  --color-action-primary: #353758;
+  --color-action-primary-hover: #7347F1;
+  --color-action-primary-disabled: #1e1f33;
+  --color-action-primary-blurple: #353758;
+  --color-action-primary-blurple-hover: #4951E8;
+  --color-menuitem-hover: #373748;
+  --color-text-application-professional: #F95F5F;
+  --color-text-application-mod: #4AA8FF;
+}
+
+body.light {
+  --color-bg: #D1F3E5;
+  --color-bg-wrapper: #8CE1BD;
+  --color-bg-wrapper-alt: #AFF5D8;
+  --color-text-primary: #353758;
+  --color-text-secondary: #676994;
+  --color-text-disabled: #B9CCC4;
+  --color-text-tag: #FFFFFF;
+  --color-accent: #D1F3E5;
+  --color-action-primary: #8CE1BD;
+  --color-action-primary-hover: #FFFFFF;
+  --color-action-primary-disabled: #E0FFF2;
+  --color-action-primary-blurple: #D1F3E5;
+  --color-action-primary-blurple-hover: #FFFFFF;
+  --color-menuitem-hover: #AFF5D8;
+  --color-text-application-professional: #BD6675;
+  --color-text-application-mod: #3D689B;
+}
+
+/* Elements */
+
+main {
+  max-width: var(--max-width-full);
+  margin: 100px auto 0 auto;
+  padding: 0px 100px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+}
+
+.action-primary {
+  margin: 0px;
+  padding: 17px 28px;
+  border: none;
+  border-radius: 26px;
+  color: var(--color-text-primary);
+  background-color: var(--color-action-primary);
+  font-size: 16.68px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background ease-in-out 0.2s;
+}
+
+.action-primary.fullsize {
+  width: 100%;
+}
+
+.action-primary:hover {
+  background-color: var(--color-action-primary-hover);
+}
+
+.action-primary.disabled,
+.action-primary.disabled:hover,
+.action-primary.disabled:active {
+  cursor: not-allowed;
+  color: var(--color-text-disabled);
+  background-color: var(--color-action-primary-disabled);
+  opacity: 1;
+}
+
+.action-primary.blurple {
+  background-color: var(--color-action-primary-blurple);
+}
+
+.action-primary.blurple:hover {
+  background-color: var(--color-action-primary-blurple-hover);
+}
+
+.action-primary:active,
+.action-secondary:active {
+  opacity: .8;
+}
+
+.action-primary span {
+  margin-right: 10px;
+}
+
+.action-secondary {
+  margin: 0px 36px;
+  color: var(--color-text-primary);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: opacity ease-in-out 0.2s;
+}
+
+.action-primary svg path {
+  fill: var(--color-text-primary);
+}
+
+.contentblock {
+  margin: 0px 0 150px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.contentblock.l {
+  flex-direction: row;
+}
+
+.contentblock.r {
+  flex-direction: row-reverse;
+}
+
+.contentblock.l .animate {
+  animation: fadeInLeft;
+  animation-duration: .2s;
+}
+
+.contentblock.r .animate {
+  flex-direction: fadeInRight;
+  animation-duration: .2s;
+}
+
+.contentblock-text {
+  width: 458px;
+}
+
+.contentblock-text p {
+  font-size: 15px;
+  margin: 10px 0;
+  color: var(--color-text-secondary);
+}
+
+.contentblock-text h2 {
+  font-size: 35px;
+  margin: 0;
+  display: inline-block;
+}
+
+.contentblock-actions {
+  margin: 25px 0 0 0;
+}
+
+.contentblock-tagrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.contentblock .tag {
+  border-radius: 30px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 6px 0px 0px 0px;
+  font-size: 10.5px;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--color-text-tag);
+}
+
+.tag.red {
+  background-color: rgba(241, 71, 102, 0.5);
+}
+
+.tag.green {
+  background-color: rgba(47, 151, 95, 0.5);
+}
+
+.contentfullsizeblock {
+  background-color: var(--color-bg-wrapper-alt);
+  border-radius: 20px;
+  padding: 50px 80px;
+  margin: 0px 0 100px 0;
+}
+
+.contentfullsizeblock h2 {
+  font-size: 35px;
+  margin: 0;
+  display: inline-block;
+}
+
+.contentfullsizeblock h3 {
+  font-size: 20px;
+  margin: 40px 0 5px 0;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  display: inline-block;
+}
+
+.contentfullsizeblock p {
+  font-size: 15px;
+  margin: 10px 0;
+  color: var(--color-text-secondary);
+}
+
+.contentfullsizeblock ul {
+  margin: 0 0 60px 0;
+  color: var(--color-text-secondary);
+  padding: 0 0 0 25px;
+}
+
+svg.application-icon {
+  margin: 0 15px 0 0;
+}
+
+svg.application-icon.mod path {
+  fill: var(--color-text-application-mod);
+}
+
+svg.application-icon.professional path {
+  fill: var(--color-text-application-professional);
+}
+
+svg.disabled path {
+  fill: var(--color-text-disabled);
+}
+
+.error-page {
+  margin-top: 20vh;
+}
+
+.error-page .contentblock {
+  margin: 0;
+  width: 100%;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1050px) {
+  .contentblock-text {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  main {
+    padding: 0px 50px;
+    margin: 50px 0 auto 0;
+  }
+
+  .contentblock {
+    margin: 0px 0 80px 0;
+    text-align: center;
+    row-gap: 20px;
+  }
+
+  .contentblock-image img {
+    display: none;
+  }
+
+  .contentblock.l,
+  .contentblock.r {
+    flex-direction: column-reverse;
+  }
+
+  .action-secondary {
+    display: none;
+  }
+
+  .contentblock-tagrow {
+    flex-direction: column;
+  }
+
+  .contentfullsizeblock {
+    margin: 0px 0 60px 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .error-page {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main {
+    padding: 0px 20px;
+  }
+
+  .contentfullsizeblock {
+    padding: 25px 20px;
+    margin: 0px 0 30px 0;
+  }
+  
+  .contentfullsizeblock h2 {
+    font-size: 25px;
+  }
+
+  .contentfullsizeblock svg {
+    display: none;
+  }
+  
+  .contentfullsizeblock h3 {
+    font-size: 16px;
+    margin: 20px 0 5px 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .contentblock-text p {
+    font-size: 14px;
+  }
+
+  .contentblock-text h2 {
+    font-size: 25px;
+  }
+}
