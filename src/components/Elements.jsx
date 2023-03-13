@@ -6,13 +6,13 @@ import React from "react";
 export function PrimaryButton(props) {
   const className = 'action-primary' + (props.fullsize ? ' fullsize' : '') + (props.disabled ? ' disabled' : '') + (props.className ? ' ' + props.className : ''),
     Button = () =>
-      <button aria-disabled={props.disabled ? true : undefined} title={props.disabled ? "Disabled" : undefined} className={className}>
+      <button tabIndex={0} aria-disabled={props.disabled ? true : undefined} title={props.disabled ? "Disabled" : undefined} className={className}>
         <span>{props.text}</span>
         {props.arrow ? props.disabled ? <Arrow className="disabled" /> : <Arrow /> : ''}
       </button>,
     LinkElement = () =>
       props.disabled ? <Button /> :
-        props.ext === true ? <a href={props.destination} rel='noreferrer' target='_blank'><Button /></a> : <Link to={props.destination}><Button /></Link>
+        props.ext === true ? <a aria-label={props.text} href={props.destination} rel='noreferrer' target='_blank'><Button /></a> : <Link aria-label={props.text} to={props.destination}><Button /></Link>
   return (
     <>
       <LinkElement />

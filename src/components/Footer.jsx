@@ -12,7 +12,7 @@ function Footer() {
     <div className="footer-wrapper">
       <footer>
         <div className='footer-branding'>
-          <Link to='/'>
+          <Link aria-label='Home' to='/'>
             <Logo />
           </Link>
           <div>
