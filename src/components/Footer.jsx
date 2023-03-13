@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   const DiscordIcon = require('../assets/social-icons/discord.svg').ReactComponent,
     TwitterIcon = require('../assets/social-icons/twitter.svg').ReactComponent,
+    GitHubIcon = require('../assets/social-icons/github.svg').ReactComponent,
     YouTubeIcon = require('../assets/social-icons/youtube.svg').ReactComponent,
     LinkedInIcon = require('../assets/social-icons/linkedin.svg').ReactComponent;
   return (
@@ -26,6 +27,9 @@ function Footer() {
           </a>
           <a title='Twitter' href="https://twitter.com/cmty_architects" target="_blank" rel='noreferrer'>
             <TwitterIcon className='social-icon' />
+          </a>
+          <a title='GitHub' href="https://github.com/communityarchitects" target="_blank" rel='noreferrer'>
+            <GitHubIcon className='social-icon' />
           </a>
           <a title='YouTube' href="https://www.youtube.com/@cmty_architects" target="_blank" rel='noreferrer'>
             <YouTubeIcon className='social-icon' />
