@@ -36,7 +36,7 @@ function Applications() {
             <li>Prior message activity within the community.</li>
             <li>General familiarity with how the server works and is built up.</li>
           </ul>
-          <PrimaryButton fullsize text="Apply Now" arrow disabled />
+          <PrimaryButton ext fullsize text="Apply Now" destination="https://forms.gle/J4WZPkoxSu9KZhAb9" arrow />
         </ContentFullsizeBlock>
 
         <ContentFullsizeBlock animate>
