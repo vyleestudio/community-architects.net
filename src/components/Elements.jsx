@@ -12,7 +12,7 @@ export function PrimaryButton(props) {
       </button>,
     LinkElement = () =>
       props.disabled ? <Button /> :
-        props.ext === true ? <a aria-label={props.text} href={props.destination} rel='noreferrer' target='_blank'><Button /></a> : <Link aria-label={props.text} to={props.destination}><Button /></Link>
+        props.ext === true ? <a tabIndex={-1} aria-label={props.text} href={props.destination} rel='noreferrer' target='_blank'><Button /></a> : <Link tabIndex={-1} aria-label={props.text} to={props.destination}><Button /></Link>
   return (
     <>
       <LinkElement />
