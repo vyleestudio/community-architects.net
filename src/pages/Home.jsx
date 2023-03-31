@@ -33,7 +33,7 @@ function Home() {
             </div>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/illustrations/podium-dark.svg').default
               :
               require('../assets/illustrations/podium-light.svg').default}
@@ -51,7 +51,7 @@ function Home() {
             </p>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/illustrations/helpdesk-dark.svg').default
               :
               require('../assets/illustrations/helpdesk-light.svg').default}
@@ -70,7 +70,7 @@ function Home() {
             </p>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/illustrations/campfirechats-dark.svg').default
               :
               require('../assets/illustrations/campfirechats-light.svg').default}
@@ -89,7 +89,7 @@ function Home() {
             </p>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/illustrations/showcase-dark.svg').default
               :
               require('../assets/illustrations/showcase-light.svg').default}

@@ -53,7 +53,7 @@ function Content() {
             </div>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/content/disabilitypride-dark.png')
               :
               require('../assets/content/disabilitypride-light.png')}
@@ -78,7 +78,7 @@ function Content() {
             </div>
           </div>
           <div className='contentblock-image'>
-            <img alt='' src={theme === 'dark' ?
+            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
               require('../assets/content/pride-dark.png')
               :
               require('../assets/content/pride-light.png')}
