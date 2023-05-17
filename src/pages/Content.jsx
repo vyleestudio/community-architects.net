@@ -2,25 +2,32 @@ import { Helmet } from 'react-helmet';
 import { useLocation, useOutletContext } from 'react-router-dom';
 import { PrimaryButton, ContentBlock, Tag } from '../components/Elements';
 import Header from '../components/Header';
+import LazyImage from "../components/LazyImage";
 
 function Content() {
   const [theme] = useOutletContext(),
     loc = useLocation();
   return (
-    <>
-      <Helmet>
-        <title>Content | Community Architects</title>
-        <link rel="canonical" href={`https://community-architects.net${loc.pathname}`} />
-      </Helmet>
-      <Header>
-        <div>
-          <h1>Content & Resources</h1>
-          <h2>Our staff team at Community Architects regularly hosts interactive events, featuring special speakers, discussing various aspects of community management.</h2>
-        </div>
-      </Header>
-      <main>
-
-        {/* <ContentBlock animate>
+		<>
+			<Helmet>
+				<title>Content | Community Architects</title>
+				<link
+					rel="canonical"
+					href={`https://community-architects.net${loc.pathname}`}
+				/>
+			</Helmet>
+			<Header>
+				<div>
+					<h1>Content & Resources</h1>
+					<h2>
+						Our staff team at Community Architects regularly hosts
+						interactive events, featuring special speakers,
+						discussing various aspects of community management.
+					</h2>
+				</div>
+			</Header>
+			<main>
+				{/* <ContentBlock animate>
           <div className='contentblock-text'>
             <h2>Flokie Interview</h2>
             <p>
@@ -37,57 +44,80 @@ function Content() {
           </div>
         </ContentBlock> */}
 
-        <ContentBlock animate>
-          <div className='contentblock-text'>
-            <div className='contentblock-tagrow'>
-              <h2>Disability Pride</h2>
-              <Tag color="green">Communities on Discord</Tag>
-            </div>
-            <p>
-              Join us on stage for a new campfire topic talk. We will be discussing the
-              language of disability as well as bringing awareness with your community interactions.
-              Let's get the discussion going to educate each other with positive choices we can make.
-            </p>
-            <div className='contentblock-actions'>
-              <PrimaryButton text="Watch" ext destination="https://www.youtube.com/watch?v=nefJID_9Jug" arrow />
-            </div>
-          </div>
-          <div className='contentblock-image'>
-            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/content/disabilitypride-dark.png')
-              :
-              require('../assets/content/disabilitypride-light.png')}
-            />
-          </div>
-        </ContentBlock>
+				<ContentBlock animate>
+					<div className="contentblock-text">
+						<div className="contentblock-tagrow">
+							<h2>Disability Pride</h2>
+							<Tag color="green">Communities on Discord</Tag>
+						</div>
+						<p>
+							Join us on stage for a new campfire topic talk. We
+							will be discussing the language of disability as
+							well as bringing awareness with your community
+							interactions. Let's get the discussion going to
+							educate each other with positive choices we can
+							make.
+						</p>
+						<div className="contentblock-actions">
+							<PrimaryButton
+								text="Watch"
+								ext
+								destination="https://www.youtube.com/watch?v=nefJID_9Jug"
+								arrow
+							/>
+						</div>
+					</div>
+					<div className="contentblock-image">
+						<LazyImage
+							className="no-touch"
+							draggable={false}
+							alt="Illustration of a diverse group of users in the Community Architects Discord server, represented by a rainbow with alternative colors symbolizing disability accessibility and inclusion"
+							src={
+								theme === "dark"
+									? require("../assets/content/disabilitypride-dark.png")
+									: require("../assets/content/disabilitypride-light.png")
+							}
+						/>
+					</div>
+				</ContentBlock>
 
-        <ContentBlock animate>
-          <div className='contentblock-text'>
-            <div className='contentblock-tagrow'>
-              <h2>Pride</h2>
-              <Tag color="green">Communities on Discord</Tag>
-            </div>
-            <p>
-              We're celebrating spaces that champion the LGBTQ+ community,
-              for showing support to their community members. Come join and listen into
-              our discussion on a celebration that will be informative, personal,
-              and another great memory for your community!
-            </p>
-            <div className='contentblock-actions'>
-              <PrimaryButton text="Watch" ext destination="https://www.youtube.com/watch?v=o812oD39eC8" arrow />
-            </div>
-          </div>
-          <div className='contentblock-image'>
-            <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/content/pride-dark.png')
-              :
-              require('../assets/content/pride-light.png')}
-            />
-          </div>
-        </ContentBlock>
-
-      </main>
-    </>
+				<ContentBlock animate>
+					<div className="contentblock-text">
+						<div className="contentblock-tagrow">
+							<h2>Pride</h2>
+							<Tag color="green">Communities on Discord</Tag>
+						</div>
+						<p>
+							We're celebrating spaces that champion the LGBTQ+
+							community, for showing support to their community
+							members. Come join and listen into our discussion on
+							a celebration that will be informative, personal,
+							and another great memory for your community!
+						</p>
+						<div className="contentblock-actions">
+							<PrimaryButton
+								text="Watch"
+								ext
+								destination="https://www.youtube.com/watch?v=o812oD39eC8"
+								arrow
+							/>
+						</div>
+					</div>
+					<div className="contentblock-image">
+						<LazyImage
+							className="no-touch"
+							draggable={false}
+							alt="Illustration showing a community of users in the Community Architects Discord server, represented by a rainbow with alternative colors symbolizing LGBTQ+ pride and inclusion."
+							src={
+								theme === "dark"
+									? require("../assets/content/pride-dark.png")
+									: require("../assets/content/pride-light.png")
+							}
+						/>
+					</div>
+				</ContentBlock>
+			</main>
+		</>
   );
 }
 

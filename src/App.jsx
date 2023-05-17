@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Menu theme={theme} toggleTheme={toggleTheme} />
-      <div className="outlet">
+      <div className="outlet" id="skip">
         <Outlet context={[theme, toggleTheme]} />
       </div>
       <Footer />

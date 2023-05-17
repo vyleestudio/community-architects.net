@@ -1,25 +1,32 @@
+import React from "react";
 import { createBrowserRouter as browserRouter, createRoutesFromElements as routes, Route } from "react-router-dom";
 // Pages
 import App from './App';
-import Home from './pages/Home';
-import Content from './pages/Content';
-import Applications from './pages/Applications';
-import NotFound from './pages/NotFound';
+
+/** Lazy load */
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Content = React.lazy(() => import("./pages/Content"));
+const Applications = React.lazy(() => import("./pages/Applications"));
 
 const router = browserRouter(
-  routes(
-    <Route path="/" errorElement={<NotFound />} element={<App />}>
-      {/* Default route */}
-      <Route index element={<Home />} />
+	routes(
+		<Route
+			path="/"
+			errorElement={<NotFound />}
+			element={<App />}
+		>
+			{/* Default route */}
+			<Route index element={<Home />} />
 
-      {/* Pages */}
-      <Route path="content" element={<Content />} />
-      <Route path="applications" element={<Applications />} />
+			{/* Pages */}
+			<Route path="content" element={<Content />} />
+			<Route path="applications" element={<Applications />} />
 
-      {/* Fallback Route */}
-      {/* Disabled */}
-    </Route>
-  )
+			{/* Fallback Route */}
+			{/* Disabled */}
+		</Route>
+	)
 );
 
 export default router;

@@ -3,7 +3,7 @@ import { Expand, Logo, ToggleDark, ToggleLight } from './Symbols';
 import config from '../config.json';
 
 // Symbols
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 const links = [
@@ -84,6 +84,29 @@ function Menu({ theme, toggleTheme }) {
       menuVisible ? hideMenu() : showMenu();
     };
 
+  const SkipLink = (props) => {
+		const onClick = (event) => {
+			event.preventDefault();
+
+			const container = document.querySelector("#skip"); // Find the div with id "skip"
+
+			if (container) {
+				container.tabIndex = -1;
+				container.focus();
+				setTimeout(() => container.removeAttribute("tabindex"), 1000);
+			}
+		};
+
+		return React.cloneElement(props.children, {
+			onClick,
+			className: props.className,
+		});
+  };
+
+  SkipLink.defaultProps = {
+		className: "skip-link",
+  };
+
   return (
     <>
       <Helmet>
@@ -100,6 +123,11 @@ function Menu({ theme, toggleTheme }) {
           <div ref={menuToggle} className='togglemenu'>
             <Expand onClick={toggleMenu} />
           </div>
+          {/* skip navigation */}
+          <SkipLink>
+            <button type="button">Skip to main content</button>
+          </SkipLink>
+
           {/* Logo */}
           <div className='menu-branding'>
             <Link aria-label='Home' to='/'>
@@ -109,7 +137,7 @@ function Menu({ theme, toggleTheme }) {
           {/* Menu */}
           <div ref={menuBar} className='menubar-desktop'>
             <MenuNav fn={hideMenu} />
-            <div tabIndex={0} on onClick={toggleTheme} title="Toggle Theme" role='button' className='toggletheme'>
+            <div tabIndex={0} onClick={toggleTheme} title="Toggle Theme" role='button' className='toggletheme'>
               {theme === 'dark' ? <ToggleLight /> : <ToggleDark />}
             </div>
           </div>

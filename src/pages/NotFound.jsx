@@ -38,7 +38,7 @@ function NotFound() {
               </div>
             </div>
             <div className='contentblock-image'>
-              <img alt='' height="200px" src={require('../assets/illustrations/flower.svg').default} />
+              <img alt={'Illustration of a flower representing a \'Page Not Found\' scenario in the theme of Community Architects'} height="200px" src={require('../assets/illustrations/flower.svg').default} />
             </div>
           </ContentBlock>
         </div>
