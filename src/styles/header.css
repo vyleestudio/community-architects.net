@@ -12,13 +12,16 @@ header {
 }
 
 header h1 {
-  font-size: 41px;
+  font-size: 46px;
   font-weight: bold;
+  text-transform: uppercase;
+  margin: 50px 0 17px 0;
 }
 
-header h2 {
+header p {
   font-size: 17px;
   font-weight: normal;
+  color: var(--color-text-secondary);
 }
 
 .header-actions {
@@ -30,7 +33,7 @@ header h2 {
 
 @media only screen and (max-width: 900px) {
   header {
-    padding: 0px 50px 50px 50px;
+    padding: 0px 30px 30px 30px;
     text-align: center;
   }
 }
@@ -38,11 +41,22 @@ header h2 {
 @media only screen and (max-width: 800px) {
   .header-wrapper {
     padding: 30px 0 0 0;
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 15px;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  
+
   header {
     padding: 0px 25px 50px 25px;
   }

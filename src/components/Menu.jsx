@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Expand, Logo, ToggleDark, ToggleLight } from './Symbols';
-import config from '../config.json';
+// import config from '../config.json';
 
 // Symbols
 import { useRef, useState } from 'react';
@@ -15,11 +15,13 @@ const links = [
     name: "Applications",
     destination: "applications"
   },
+  /*   
   {
     name: "Appeals",
     destination: config.appealsInviteURL,
     ext: true
   }
+  */
 ];
 
 const activeClassName = 'active';
@@ -89,16 +91,16 @@ function Menu({ theme, toggleTheme }) {
       <Helmet>
         {/* Adjust theme color to theme */}
         {theme === 'dark' ?
-          <meta name="theme-color" content="#242538" />
+          <meta name="theme-color" content="#191A34" />
           :
-          <meta name="theme-color" content="#8CE1BD" />
+          <meta name="theme-color" content="#FFFFFF" />
         }
       </Helmet>
-      <div className='menu-wrapper'>
+      <div onClick={toggleMenu} className='menu-wrapper'>
         <div className='menu' >
           {/* Mobile Menu Toggle */}
           <div ref={menuToggle} className='togglemenu'>
-            <Expand onClick={toggleMenu} />
+            <Expand />
           </div>
           {/* Logo */}
           <div className='menu-branding'>
