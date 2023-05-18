@@ -97,10 +97,10 @@ function Menu({ theme, toggleTheme }) {
         }
       </Helmet>
       <div className='menu-wrapper'>
-        <div className='menu' >
+        <div onClick={toggleMenu} className='menu' >
           {/* Mobile Menu Toggle */}
           <div ref={menuToggle} className='togglemenu'>
-            <Expand onClick={toggleMenu} />
+            <Expand />
           </div>
           {/* Logo */}
           <div className='menu-branding'>
