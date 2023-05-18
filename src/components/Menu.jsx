@@ -111,7 +111,7 @@ function Menu({ theme, toggleTheme }) {
           {/* Menu */}
           <div ref={menuBar} className='menubar-desktop'>
             <MenuNav fn={hideMenu} />
-            <div tabIndex={0} on onClick={toggleTheme} title="Toggle Theme" role='button' className='toggletheme'>
+            <div tabIndex={0} onClick={toggleTheme} title="Toggle Theme" role='button' className='toggletheme'>
               {theme === 'dark' ? <ToggleLight /> : <ToggleDark />}
             </div>
           </div>
