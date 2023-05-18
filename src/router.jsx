@@ -8,13 +8,14 @@ const NotFound = React.lazy(() => import("./pages/NotFound"));
 const Home = React.lazy(() => import("./pages/Home"));
 const Content = React.lazy(() => import("./pages/Content"));
 const Applications = React.lazy(() => import("./pages/Applications"));
+const Footer = React.lazy(() => import("./components/Footer"));
 
 const router = browserRouter(
 	routes(
 		<Route
 			path="/"
 			errorElement={<NotFound />}
-			element={<App />}
+			element={<App><Footer /></App>}
 		>
 			{/* Default route */}
 			<Route index element={<Home />} />
