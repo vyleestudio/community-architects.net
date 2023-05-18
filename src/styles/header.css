@@ -12,11 +12,13 @@ header {
 }
 
 header h1 {
-  font-size: 41px;
+  font-size: 46px;
   font-weight: bold;
+  text-transform: uppercase;
+  margin: 50px 0 17px 0;
 }
 
-header h2 {
+header p {
   font-size: 17px;
   font-weight: normal;
 }
