@@ -15,43 +15,41 @@ function Home() {
 			<Header>
 				<div>
 					<h1>Community Architects</h1>
-					<h2>
-						We are committed to bringing together community leaders,
-						moderators, designers, and developers to share our
-						biggest passion: Building communities on Discord.
-					</h2>
+					<p>
+						Unite with fellow community leaders to share our biggest
+						passion: Building communities on Discord. We offer
+						several great opportunities for Discord users, both
+						experienced and new, to share ideas, exchange advice,
+						receive feedback, collaborate, and create impactful
+						communities.
+					</p>
 				</div>
 			</Header>
 			<main>
 				<ContentBlock animate>
 					<div className="contentblock-text">
-						<h2>Stage Podcast Events</h2>
+						<h2>Offer or receive services</h2>
 						<p>
-							Our staff team at Community Architects regularly
-							hosts interactive events, featuring special
-							speakers, discussing various aspects of community
-							management. These events provide a public forum for
-							you to learn and ask questions about the
-							technicalities of community management.
+							Share your latest projects, get feedback from other
+							community managers, and find inspiration from the
+							work of others!
 						</p>
-						<div className="contentblock-actions">
-							<PrimaryButton
-								text="Visit Content"
-								destination="content"
-								arrow
-							/>
-						</div>
+						{/* 
+            <div className='contentblock-actions'>
+              <PrimaryButton text="Visit Content" destination="content" arrow />
+            </div>
+             */}
 					</div>
 					<div className="contentblock-image">
-						<img
+						<LazyImage
 							className="no-touch"
 							draggable={false}
-							alt="Illustration of a podium hosted by community architects staff team with special guests."
+							alt="Illustration showcasing a list of different types of opportunities that might be available for you to apply for."
 							src={
 								theme === "dark"
-									? require("../assets/illustrations/podium-dark.svg")
+									? require("../assets/illustrations/opportunities-dark.svg")
 											.default
-									: require("../assets/illustrations/podium-light.svg")
+									: require("../assets/illustrations/opportunities-light.svg")
 											.default
 							}
 						/>
@@ -60,14 +58,10 @@ function Home() {
 
 				<ContentBlock animate r>
 					<div className="contentblock-text">
-						<h2>Top Tier Advice Panels</h2>
+						<h2>Collaborate with leaders</h2>
 						<p>
-							Our Helpdesk category connects you with experienced
-							community leaders, designers, developers, and
-							managers to get tailored advice and answers to your
-							specific inquiries. Improve your community with
-							helpful conversations and guidance from experts in
-							their respective fields.
+							If you need specific feedback or advice on anything
+							community related, check out the Helpdesk Forums!
 						</p>
 					</div>
 					<div className="contentblock-image">
@@ -88,15 +82,11 @@ function Home() {
 
 				<ContentBlock animate>
 					<div className="contentblock-text">
-						<h2>Monthly Campfire Chats</h2>
+						<h2>Share your highlights</h2>
 						<p>
-							We love learning more about everything happening
-							within your communities. Whether that's an event
-							concept you're trying out, a category you
-							introduced, or even how people use the new emojis
-							you worked on for so long. Give yourself a few
-							minutes to self-reflect on your community and share
-							some of those super awesome highlights with us!
+							Join our Campfire Chat and allow yourself to reflect
+							on your own community. Learn from other community
+							leaders' experiences!
 						</p>
 					</div>
 					<div className="contentblock-image">
@@ -108,9 +98,9 @@ function Home() {
 							}
 							src={
 								theme === "dark"
-									? require("../assets/illustrations/campfirechats-dark.svg")
+									? require("../assets/illustrations/camp-dark.svg")
 											.default
-									: require("../assets/illustrations/campfirechats-light.svg")
+									: require("../assets/illustrations/camp-light.svg")
 											.default
 							}
 						/>
@@ -119,15 +109,11 @@ function Home() {
 
 				<ContentBlock animate r>
 					<div className="contentblock-text">
-						<h2>Community Showcase</h2>
+						<h2>Showcase your work</h2>
 						<p>
-							Looking for a platform to showcase your community
-							creations and events? Our showcase channel provides
-							a space for community managers to share their latest
-							developments, from new bot features to upcoming
-							events. Share your latest projects, get feedback
-							from other community managers, and find inspiration
-							from the work of others.
+							Share your latest projects, get feedback from other
+							community managers, and find inspiration from the
+							work of others!
 						</p>
 					</div>
 					<div className="contentblock-image">
@@ -145,6 +131,49 @@ function Home() {
 						/>
 					</div>
 				</ContentBlock>
+
+				<ContentBlock animate l>
+					<div className="contentblock-text">
+						<h2>Learn from pros</h2>
+						<p>
+							Our team regularly hosts events, featuring special
+							speakers, discussing various aspects of community
+							management!
+						</p>
+					</div>
+					<div className="contentblock-image">
+						<LazyImage
+							className="no-touch"
+							draggable={false}
+							alt="Illustration of a podium hosted by community architects staff team with special guests."
+							src={
+								theme === "dark"
+									? require("../assets/illustrations/podium-dark.svg")
+											.default
+									: require("../assets/illustrations/podium-light.svg")
+											.default
+							}
+						/>
+					</div>
+				</ContentBlock>
+
+				<div className="supportblock">
+					<h2>Are you interested in supporting our work?</h2>
+					<p>
+						Check out our Ko-Fi page! You can directly help us with
+						financially compensating our developers, content
+						editors, and managers for their hard work. Thanks!
+					</p>
+					<div className="supportblock-actions">
+						<PrimaryButton
+							text="Donate"
+							border
+							ext
+							destination="https://ko-fi.com/communityarchitects"
+							arrow
+						/>
+					</div>
+				</div>
 			</main>
 		</>
   );

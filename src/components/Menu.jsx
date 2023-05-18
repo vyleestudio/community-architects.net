@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Expand, Logo, ToggleDark, ToggleLight } from './Symbols';
-import config from '../config.json';
+// import config from '../config.json';
 
 // Symbols
 import React, { useRef, useState } from 'react';
@@ -15,11 +15,13 @@ const links = [
     name: "Applications",
     destination: "applications"
   },
+  /*   
   {
     name: "Appeals",
     destination: config.appealsInviteURL,
     ext: true
   }
+  */
 ];
 
 const activeClassName = 'active';
@@ -84,56 +86,42 @@ function Menu({ theme, toggleTheme }) {
       menuVisible ? hideMenu() : showMenu();
     };
 
-  const SkipLink = (props) => {
-		const onClick = (event) => {
-			event.preventDefault();
+  const SkipLink = () => {
+    // Find the element with id "skip"
+    const container = document.querySelector("#skip");
 
-			const container = document.querySelector("#skip"); // Find the div with id "skip"
-
-			if (container) {
-				container.tabIndex = -1;
-				container.focus();
-				setTimeout(() => container.removeAttribute("tabindex"), 1000);
-			}
-		};
-
-		return React.cloneElement(props.children, {
-			onClick,
-			className: props.className,
-		});
+    if (container) {
+      container.tabIndex = -1;
+      container.focus();
+      setTimeout(() => container.removeAttribute("tabindex"), 200);
+    }
   };
 
-  SkipLink.defaultProps = {
-		className: "skip-link",
-  };
 
   return (
     <>
       <Helmet>
         {/* Adjust theme color to theme */}
         {theme === 'dark' ?
-          <meta name="theme-color" content="#242538" />
+          <meta name="theme-color" content="#191A34" />
           :
-          <meta name="theme-color" content="#8CE1BD" />
+          <meta name="theme-color" content="#FFFFFF" />
         }
       </Helmet>
-      <div className='menu-wrapper'>
+      <div onClick={toggleMenu} className='menu-wrapper'>
         <div className='menu' >
           {/* Mobile Menu Toggle */}
           <div ref={menuToggle} className='togglemenu'>
-            <Expand onClick={toggleMenu} />
+            <Expand />
           </div>
-          {/* skip navigation */}
-          <SkipLink>
-            <button type="button">Skip to main content</button>
-          </SkipLink>
-
           {/* Logo */}
           <div className='menu-branding'>
             <Link aria-label='Home' to='/'>
               <Logo />
             </Link>
           </div>
+          {/* skip navigation */}
+          <button className="skip-link" onClick={() => SkipLink()}>Skip to content</button>
           {/* Menu */}
           <div ref={menuBar} className='menubar-desktop'>
             <MenuNav fn={hideMenu} />

@@ -19,30 +19,48 @@ function Content() {
 			<Header>
 				<div>
 					<h1>Content & Resources</h1>
-					<h2>
+					<p>
 						Our staff team at Community Architects regularly hosts
 						interactive events, featuring special speakers,
 						discussing various aspects of community management.
-					</h2>
+					</p>
 				</div>
 			</Header>
 			<main>
-				{/* <ContentBlock animate>
-          <div className='contentblock-text'>
-            <h2>Flokie Interview</h2>
-            <p>
-              To kick off our new series of creator AMA's, we'll be
-              joined by Flokie to learn more about what challenges arise
-              when running one of the biggest communities on the platform.
-            </p>
-            <div className='contentblock-actions'>
-              <PrimaryButton text="Watch" ext destination="https://youtube.com" arrow />
-            </div>
-          </div>
-          <div className='contentblock-image'>
-            ...
-          </div>
-        </ContentBlock> */}
+				<ContentBlock animate>
+					<div className="contentblock-text">
+						<div className="contentblock-tagrow">
+							<h2>Flokie Interview</h2>
+							<Tag color="red">Creators on Discord</Tag>
+						</div>
+						<p>
+							We'll be joined by Flokie to learn more about what
+							challenges arise when running one of the biggest
+							communities on the platform.
+						</p>
+						<div className="contentblock-actions">
+							<PrimaryButton
+								disabled
+								text="Watch Video"
+								ext
+								destination="https://youtube.com"
+								arrow
+							/>
+						</div>
+					</div>
+					<div className="contentblock-image">
+						<LazyImage
+							className="no-touch"
+							draggable={false}
+							alt={`Illustration of community event "Flokie interview" where Flokie will join us to talk about the challenges of running one of the biggest communities on Discord.`}
+							src={
+								theme === "dark"
+									? require("../assets/content/valorant-dark.png")
+									: require("../assets/content/valorant-light.png")
+							}
+						/>
+					</div>
+				</ContentBlock>
 
 				<ContentBlock animate>
 					<div className="contentblock-text">
@@ -51,16 +69,13 @@ function Content() {
 							<Tag color="green">Communities on Discord</Tag>
 						</div>
 						<p>
-							Join us on stage for a new campfire topic talk. We
-							will be discussing the language of disability as
+							We will be discussing the language of disability as
 							well as bringing awareness with your community
-							interactions. Let's get the discussion going to
-							educate each other with positive choices we can
-							make.
+							interactions.
 						</p>
 						<div className="contentblock-actions">
 							<PrimaryButton
-								text="Watch"
+								text="Watch Video"
 								ext
 								destination="https://www.youtube.com/watch?v=nefJID_9Jug"
 								arrow
@@ -90,13 +105,11 @@ function Content() {
 						<p>
 							We're celebrating spaces that champion the LGBTQ+
 							community, for showing support to their community
-							members. Come join and listen into our discussion on
-							a celebration that will be informative, personal,
-							and another great memory for your community!
+							members.
 						</p>
 						<div className="contentblock-actions">
 							<PrimaryButton
-								text="Watch"
+								text="Watch Video"
 								ext
 								destination="https://www.youtube.com/watch?v=o812oD39eC8"
 								arrow
@@ -116,6 +129,24 @@ function Content() {
 						/>
 					</div>
 				</ContentBlock>
+
+				<div className="supportblock">
+					<h2>Are you interested in supporting our editors?</h2>
+					<p>
+						Check out our Ko-Fi page! You can directly help us with
+						financially compensating our content editors for their
+						hard work. Thanks!
+					</p>
+					<div className="supportblock-actions">
+						<PrimaryButton
+							text="Donate"
+							border
+							ext
+							destination="https://ko-fi.com/communityarchitects"
+							arrow
+						/>
+					</div>
+				</div>
 			</main>
 		</>
   );

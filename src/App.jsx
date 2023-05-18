@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Menu from "./components/Menu";
 import Footer from './components/Footer';
 import { ScrollRestoration } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 // CSS
 import './styles/menu.css';
 import './styles/header.css';
@@ -29,7 +29,9 @@ function App() {
     <>
       <Menu theme={theme} toggleTheme={toggleTheme} />
       <div className="outlet" id="skip">
-        <Outlet context={[theme, toggleTheme]} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet context={[theme, toggleTheme]} />
+        </Suspense>
       </div>
       <Footer />
       <ScrollRestoration />

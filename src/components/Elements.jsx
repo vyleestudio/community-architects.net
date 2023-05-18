@@ -4,7 +4,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import React from "react";
 
 export function PrimaryButton(props) {
-  const className = 'action-primary' + (props.fullsize ? ' fullsize' : '') + (props.disabled ? ' disabled' : '') + (props.className ? ' ' + props.className : ''),
+  const className = 'action-primary' + (props.border ? ' border' : '') + (props.fullsize ? ' fullsize' : '') + (props.disabled ? ' disabled' : '') + (props.className ? ' ' + props.className : ''),
     Button = () =>
       <button tabIndex={0} aria-disabled={props.disabled ? true : undefined} title={props.disabled ? "Disabled" : undefined} className={className}>
         <span>{props.text}</span>
