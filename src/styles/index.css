@@ -414,6 +414,20 @@ svg.disabled path {
     padding: 0px 20px;
   }
 
+  h2,
+  .contentblock h2,
+  .supportblock h2 {
+    font-size: 26px;
+  }
+
+  p,
+  .contentblock p,
+  .supportblock p,
+  .contentfullsizeblock p,
+  .contentfullsizeblock ul {
+    font-size: 15px;
+  }
+
   .contentfullsizeblock {
     padding: 25px 20px;
     margin: 0px 0 30px 0;
