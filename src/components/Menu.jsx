@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Expand, Logo, ToggleDark, ToggleLight } from './Symbols';
-import config from '../config.json';
+// import config from '../config.json';
 
 // Symbols
 import { useRef, useState } from 'react';
@@ -15,11 +15,13 @@ const links = [
     name: "Applications",
     destination: "applications"
   },
+  /*   
   {
     name: "Appeals",
     destination: config.appealsInviteURL,
     ext: true
   }
+  */
 ];
 
 const activeClassName = 'active';
