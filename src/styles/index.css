@@ -94,6 +94,10 @@ p {
   line-height: 170%;
 }
 
+button {
+  font-family: 'Galano', Arial, Helvetica, sans-serif;
+}
+
 .action-primary {
   margin: 0px;
   padding: 20px 30px;
@@ -417,10 +421,6 @@ svg.disabled path {
 
   .contentfullsizeblock h2 {
     font-size: 25px;
-  }
-
-  .contentfullsizeblock svg {
-    display: none;
   }
 
   .contentfullsizeblock h3 {

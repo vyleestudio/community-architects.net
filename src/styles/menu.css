@@ -163,9 +163,9 @@ nav ul li a.active {
     display: none;
   }
 
-
   .toggletheme {
     display: block;
+    margin: 0;
   }
 
   .togglemenu {
