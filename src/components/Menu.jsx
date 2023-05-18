@@ -91,9 +91,9 @@ function Menu({ theme, toggleTheme }) {
       <Helmet>
         {/* Adjust theme color to theme */}
         {theme === 'dark' ?
-          <meta name="theme-color" content="#242538" />
+          <meta name="theme-color" content="#191A34" />
           :
-          <meta name="theme-color" content="#8CE1BD" />
+          <meta name="theme-color" content="#FFFFFF" />
         }
       </Helmet>
       <div onClick={toggleMenu} className='menu-wrapper'>
