@@ -3,7 +3,7 @@ import { Expand, Logo, ToggleDark, ToggleLight } from './Symbols';
 // import config from '../config.json';
 
 // Symbols
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 const links = [
@@ -86,6 +86,18 @@ function Menu({ theme, toggleTheme }) {
       menuVisible ? hideMenu() : showMenu();
     };
 
+  const SkipLink = () => {
+    // Find the element with id "skip"
+    const container = document.querySelector("#skip");
+
+    if (container) {
+      container.tabIndex = -1;
+      container.focus();
+      setTimeout(() => container.removeAttribute("tabindex"), 200);
+    }
+  };
+
+
   return (
     <>
       <Helmet>
@@ -108,6 +120,8 @@ function Menu({ theme, toggleTheme }) {
               <Logo />
             </Link>
           </div>
+          {/* skip navigation */}
+          <button className="skip-link" onClick={() => SkipLink()}>Skip to content</button>
           {/* Menu */}
           <div ref={menuBar} className='menubar-desktop'>
             <MenuNav fn={hideMenu} />

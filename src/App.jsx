@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Menu from "./components/Menu";
-import Footer from './components/Footer';
 import { ScrollRestoration } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
+
 // CSS
 import './styles/menu.css';
 import './styles/header.css';
 import './styles/footer.css';
 
-function App() {
+// Loading
+import Loading from './components/loading';
+
+function App(props) {
   /* System Theme (disabled) */
   /* const systemTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; */
 
@@ -28,10 +31,13 @@ function App() {
   return (
     <>
       <Menu theme={theme} toggleTheme={toggleTheme} />
-      <div className="outlet">
-        <Outlet context={[theme, toggleTheme]} />
-      </div>
-      <Footer />
+        <div className="outlet" id="skip">
+          <Suspense fallback={<Loading />}>
+            <Outlet context={[theme, toggleTheme]} />
+            {/* Footer */}
+            {props.children}
+          </Suspense>
+        </div>
       <ScrollRestoration />
     </>
   );
