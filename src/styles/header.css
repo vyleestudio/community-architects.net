@@ -33,7 +33,7 @@ header p {
 
 @media only screen and (max-width: 900px) {
   header {
-    padding: 0px 50px 50px 50px;
+    padding: 0px 30px 30px 30px;
     text-align: center;
   }
 }
@@ -47,12 +47,16 @@ header p {
 
 @media only screen and (max-width: 630px) {
   header h1 {
-    font-size: 38px;
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 15px;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  
+
   header {
     padding: 0px 25px 50px 25px;
   }
