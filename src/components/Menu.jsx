@@ -96,8 +96,8 @@ function Menu({ theme, toggleTheme }) {
           <meta name="theme-color" content="#8CE1BD" />
         }
       </Helmet>
-      <div className='menu-wrapper'>
-        <div onClick={toggleMenu} className='menu' >
+      <div onClick={toggleMenu} className='menu-wrapper'>
+        <div className='menu' >
           {/* Mobile Menu Toggle */}
           <div ref={menuToggle} className='togglemenu'>
             <Expand />
