@@ -92,6 +92,10 @@ nav ul li a.active {
   -ms-transform: scaleY(-1);
 }
 
+.togglemenu svg path {
+  fill: var(--color-text-primary)
+}
+
 /* Theme Toggle */
 
 .toggletheme {
