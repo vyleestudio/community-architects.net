@@ -240,7 +240,7 @@ button {
   line-height: 190%;
   margin: 0;
   font-size: 10.9px;
-  font-weight: bold;
+  font-weight: normal;
   display: inline-block;
   color: var(--color-text-tag);
 }
