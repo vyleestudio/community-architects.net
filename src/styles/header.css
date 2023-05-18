@@ -21,7 +21,7 @@ header h1 {
 header p {
   font-size: 17px;
   font-weight: normal;
-  color: #C3C4D9;
+  color: var(--color-text-secondary);
 }
 
 .header-actions {
