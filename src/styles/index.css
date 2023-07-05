@@ -45,6 +45,7 @@ body.dark {
   --color-text-application-professional: #F95F5F;
   --color-text-application-mod: #4AA8FF;
   --color-text-application-consultations: #FF78B8;
+  --color-codeblock: #3a3b4d;
   --tag-transparency: .5;
 }
 
@@ -72,6 +73,7 @@ body.light {
   --color-text-application-professional: #E13939;
   --color-text-application-mod: #1F79CC;
   --color-text-application-consultations: #D83984;
+  --color-codeblock: #ffffff;
   --tag-transparency: .25;
 }
 
@@ -96,6 +98,12 @@ p {
 
 button {
   font-family: 'Galano', Arial, Helvetica, sans-serif;
+}
+
+code {
+  background-color: var(--color-codeblock);
+  border-radius: 3px;
+  padding: 1px 3px;
 }
 
 .action-primary {
@@ -343,6 +351,10 @@ svg.disabled path {
   -ms-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
+}
+
+.secret {
+  display: none;
 }
 
 ::-webkit-scrollbar {
