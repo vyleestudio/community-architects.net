@@ -3,6 +3,17 @@ import { useOutletContext } from 'react-router-dom';
 import { PrimaryButton, ContentBlock } from '../components/Elements';
 import Header from '../components/Header';
 
+import OpportunitiesDark from '../assets/illustrations/opportunities-dark.svg'
+import OpportunitiesLight from '../assets/illustrations/opportunities-light.svg'
+import HelpdeskDark from '../assets/illustrations/helpdesk-dark.svg'
+import HelpdeskLight from '../assets/illustrations/helpdesk-light.svg'
+import CampDark from '../assets/illustrations/camp-dark.svg'
+import CampLight from '../assets/illustrations/camp-light.svg'
+import ShowcaseDark from '../assets/illustrations/showcase-dark.svg'
+import ShowcaseLight from '../assets/illustrations/showcase-light.svg'
+import PodiumDark from '../assets/illustrations/podium-dark.svg'
+import PodiumLight from '../assets/illustrations/podium-light.svg'
+
 function Home() {
   const [theme] = useOutletContext();
   return (
@@ -34,9 +45,7 @@ function Home() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/illustrations/opportunities-dark.svg').default
-              :
-              require('../assets/illustrations/opportunities-light.svg').default}
+              OpportunitiesDark : OpportunitiesLight}
             />
           </div>
         </ContentBlock>
@@ -51,9 +60,7 @@ function Home() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/illustrations/helpdesk-dark.svg').default
-              :
-              require('../assets/illustrations/helpdesk-light.svg').default}
+              HelpdeskDark : HelpdeskLight}
             />
           </div>
         </ContentBlock>
@@ -68,9 +75,7 @@ function Home() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/illustrations/camp-dark.svg').default
-              :
-              require('../assets/illustrations/camp-light.svg').default}
+              CampDark : CampLight}
             />
           </div>
         </ContentBlock>
@@ -85,9 +90,7 @@ function Home() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/illustrations/showcase-dark.svg').default
-              :
-              require('../assets/illustrations/showcase-light.svg').default}
+              ShowcaseDark : ShowcaseLight}
             />
           </div>
         </ContentBlock>
@@ -102,9 +105,7 @@ function Home() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/illustrations/podium-dark.svg').default
-              :
-              require('../assets/illustrations/podium-light.svg').default}
+              PodiumDark : PodiumLight}
             />
           </div>
         </ContentBlock>

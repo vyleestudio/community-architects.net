@@ -3,6 +3,13 @@ import { useLocation, useOutletContext } from 'react-router-dom';
 import { PrimaryButton, ContentBlock, Tag } from '../components/Elements';
 import Header from '../components/Header';
 
+import ValorantDark from "../assets/content/valorant-dark.png"
+import ValorantLight from "../assets/content/valorant-light.png"
+import DisabilityprideDark from "../assets/content/disabilitypride-dark.png"
+import DisabilityprideLight from "../assets/content/disabilitypride-light.png"
+import PrideDark from "../assets/content/pride-dark.png"
+import PrideLight from "../assets/content/pride-light.png"
+
 function Content() {
   const [theme] = useOutletContext(),
     loc = useLocation();
@@ -36,9 +43,7 @@ function Content() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/content/valorant-dark.png')
-              :
-              require('../assets/content/valorant-light.png')}
+              ValorantDark : ValorantLight}
             />
           </div>
         </ContentBlock>
@@ -59,9 +64,7 @@ function Content() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/content/disabilitypride-dark.png')
-              :
-              require('../assets/content/disabilitypride-light.png')}
+              DisabilityprideDark : DisabilityprideLight}
             />
           </div>
         </ContentBlock>
@@ -82,9 +85,7 @@ function Content() {
           </div>
           <div className='contentblock-image'>
             <img className='no-touch' draggable={false} alt='' src={theme === 'dark' ?
-              require('../assets/content/pride-dark.png')
-              :
-              require('../assets/content/pride-light.png')}
+              PrideDark : PrideLight}
             />
           </div>
         </ContentBlock>
