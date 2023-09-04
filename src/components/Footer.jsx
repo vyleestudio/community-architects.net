@@ -1,12 +1,7 @@
 import config from '../config.json';
 import { Logo } from './Symbols';
 import { Link } from 'react-router-dom';
-
-import DiscordIcon from '../assets/social-icons/discord.svg';
-import TwitterIcon from '../assets/social-icons/twitter.svg';
-import GitHubIcon from '../assets/social-icons/github.svg';
-import YouTubeIcon from '../assets/social-icons/youtube.svg';
-import LinkedInIcon from '../assets/social-icons/linkedin.svg';
+import { IconDiscord, IconTwitter, IconGitHub, IconYouTube, IconLinkedIn } from "./Symbols";
 
 function Footer() {
   return (
@@ -23,24 +18,24 @@ function Footer() {
           </div>
         </div>
         <div className='footer-socials'>
-          <a title='Discord' href={config.discordInviteURL} target="_blank" rel='noreferrer'>
-            <img alt='Discord' src={DiscordIcon} className='social-icon' />
+        <a title='Discord' href={config.discordInviteURL} target="_blank" rel='noreferrer'>
+            <IconDiscord alt="Discord" className='social-icon' />
           </a>
           <a title='Twitter' href="https://twitter.com/cmty_architects" target="_blank" rel='noreferrer'>
-            <img alt='Twitter' src={TwitterIcon} className='social-icon' />
+            <IconTwitter alt='Twitter' className='social-icon' />
           </a>
           <a title='GitHub' href="https://github.com/communityarchitects" target="_blank" rel='noreferrer'>
-            <img alt='GitHub' src={GitHubIcon} className='social-icon' />
+            <IconGitHub alt='GitHub' className='social-icon' />
           </a>
           <a title='YouTube' href="https://www.youtube.com/@cmty_architects" target="_blank" rel='noreferrer'>
-            <img alt='YouTube' src={YouTubeIcon} className='social-icon' />
+            <IconYouTube alt='YouTube' className='social-icon' />
           </a>
           <a title='LinkedIn' href="https://www.linkedin.com/company/communityarchitects/" target="_blank" rel='noreferrer'>
-            <img alt='LinkedIn' src={LinkedInIcon} className='social-icon' />
+            <IconLinkedIn alt='LinkedIn' className='social-icon' />
           </a>
         </div>
-      </footer >
-    </div >
+      </footer>
+    </div>
   );
 }
 
