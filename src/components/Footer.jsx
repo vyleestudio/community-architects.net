@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div className='footer-socials'>
         <a title='Discord' href={config.discordInviteURL} target="_blank" rel='noreferrer'>
-            <IconDiscord alt="Discord" className='social-icon' />
+            <IconDiscord alt='Discord' className='social-icon' />
           </a>
           <a title='Twitter' href="https://twitter.com/cmty_architects" target="_blank" rel='noreferrer'>
             <IconTwitter alt='Twitter' className='social-icon' />
