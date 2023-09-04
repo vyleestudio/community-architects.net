@@ -24,19 +24,19 @@ function Footer() {
         </div>
         <div className='footer-socials'>
           <a title='Discord' href={config.discordInviteURL} target="_blank" rel='noreferrer'>
-            <img src={DiscordIcon} className='social-icon' />
+            <img alt='Discord' src={DiscordIcon} className='social-icon' />
           </a>
           <a title='Twitter' href="https://twitter.com/cmty_architects" target="_blank" rel='noreferrer'>
-            <img src={TwitterIcon} className='social-icon' />
+            <img alt='Twitter' src={TwitterIcon} className='social-icon' />
           </a>
           <a title='GitHub' href="https://github.com/communityarchitects" target="_blank" rel='noreferrer'>
-            <img src={GitHubIcon} className='social-icon' />
+            <img alt='GitHub' src={GitHubIcon} className='social-icon' />
           </a>
           <a title='YouTube' href="https://www.youtube.com/@cmty_architects" target="_blank" rel='noreferrer'>
-            <img src={YouTubeIcon} className='social-icon' />
+            <img alt='YouTube' src={YouTubeIcon} className='social-icon' />
           </a>
           <a title='LinkedIn' href="https://www.linkedin.com/company/communityarchitects/" target="_blank" rel='noreferrer'>
-            <img src={LinkedInIcon} className='social-icon' />
+            <img alt='LinkedIn' src={LinkedInIcon} className='social-icon' />
           </a>
         </div>
       </footer >
