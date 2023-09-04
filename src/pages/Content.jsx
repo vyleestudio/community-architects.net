@@ -3,12 +3,12 @@ import { useLocation, useOutletContext } from 'react-router-dom';
 import { PrimaryButton, ContentBlock, Tag } from '../components/Elements';
 import Header from '../components/Header';
 
-import ValorantDark from "../assets/content/valorant-dark.png"
-import ValorantLight from "../assets/content/valorant-light.png"
-import DisabilityprideDark from "../assets/content/disabilitypride-dark.png"
-import DisabilityprideLight from "../assets/content/disabilitypride-light.png"
-import PrideDark from "../assets/content/pride-dark.png"
-import PrideLight from "../assets/content/pride-light.png"
+import ValorantDark from '../assets/content/valorant-dark.png';
+import ValorantLight from '../assets/content/valorant-light.png';
+import DisabilityprideDark from '../assets/content/disabilitypride-dark.png';
+import DisabilityprideLight from '../assets/content/disabilitypride-light.png';
+import PrideDark from '../assets/content/pride-dark.png';
+import PrideLight from '../assets/content/pride-light.png';
 
 function Content() {
   const [theme] = useOutletContext(),

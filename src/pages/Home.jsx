@@ -3,16 +3,16 @@ import { useOutletContext } from 'react-router-dom';
 import { PrimaryButton, ContentBlock } from '../components/Elements';
 import Header from '../components/Header';
 
-import OpportunitiesDark from '../assets/illustrations/opportunities-dark.svg'
-import OpportunitiesLight from '../assets/illustrations/opportunities-light.svg'
-import HelpdeskDark from '../assets/illustrations/helpdesk-dark.svg'
-import HelpdeskLight from '../assets/illustrations/helpdesk-light.svg'
-import CampDark from '../assets/illustrations/camp-dark.svg'
-import CampLight from '../assets/illustrations/camp-light.svg'
-import ShowcaseDark from '../assets/illustrations/showcase-dark.svg'
-import ShowcaseLight from '../assets/illustrations/showcase-light.svg'
-import PodiumDark from '../assets/illustrations/podium-dark.svg'
-import PodiumLight from '../assets/illustrations/podium-light.svg'
+import OpportunitiesDark from '../assets/illustrations/opportunities-dark.svg';
+import OpportunitiesLight from '../assets/illustrations/opportunities-light.svg';
+import HelpdeskDark from '../assets/illustrations/helpdesk-dark.svg';
+import HelpdeskLight from '../assets/illustrations/helpdesk-light.svg';
+import CampDark from '../assets/illustrations/camp-dark.svg';
+import CampLight from '../assets/illustrations/camp-light.svg';
+import ShowcaseDark from '../assets/illustrations/showcase-dark.svg';
+import ShowcaseLight from '../assets/illustrations/showcase-light.svg';
+import PodiumDark from '../assets/illustrations/podium-dark.svg';
+import PodiumLight from '../assets/illustrations/podium-light.svg';
 
 function Home() {
   const [theme] = useOutletContext();
