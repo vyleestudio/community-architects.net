@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { ContentBlock, PrimaryButton } from '../components/Elements';
 import Menu from '../components/Menu';
 
+import Flower from '../assets/illustrations/flower.svg';
+
 function NotFound() {
   /* Get theme */
   const [theme, setTheme] = useState(
@@ -49,7 +51,7 @@ function NotFound() {
               </div>
             </div>
             <div onClick={showSecret} style={{ cursor: "help" }} className='contentblock-image'>
-              <img alt='' height="200px" src={require('../assets/illustrations/flower.svg').default} />
+              <img alt='' height="200px" src={Flower} />
             </div>
           </ContentBlock>
         </div>

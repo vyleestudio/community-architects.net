@@ -9,10 +9,8 @@
   },
   "author": "pauel",
   "scripts": {
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "eject": "react-scripts eject",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "build": "vite build",
+    "start": "vite"
   },
   "browserslist": {
     "production": [
@@ -38,7 +36,11 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^3.2.0"
   }
 }
